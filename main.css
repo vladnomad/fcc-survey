@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;600&display=swap");
+
+/* create container inside grid element with set minmax height */
+
+#fcc_test_suite_wrapper {
+ display: none;
+/* comment out this value to show fcc test menu */
+}
+
+::-webkit-scrollbar {
+  visibility: hidden;
+  width: 0;
+}
+::-webkit-scrollbar-track {
+  background: #dfdfdf;
+}
+::-webkit-scrollbar-thumb {
+  background: #7c7da9c9;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #7c7da9;
+}
+body {
+  position: relative;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  font-size: .9rem;
+  letter-spacing: .1rem;
+  background: #6E5CD6;
+  background-image: url("https://drive.google.com/uc?id=1DaCxTKP31XUSFfFUWeJC_KwxnpXgcjy8");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: top;
+  background-size: auto 100vh;
+}
+#main {
+  grid-template-columns: calc((100% - 42rem) / 2) 42rem calc((100% - 42rem) / 2);
+}
+#survey-container {
+  height: 94vh;
+  margin: 3vh 0;
+  padding: 0 3rem;
+  grid-column: 2;
+  background: #ffffff4d;
+  border-radius: 16px;
+  border: 1px solid #ffffffb3;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 4px 30px #0000001a;
+}
+#title {
+  padding: 1rem 0 0;
+  margin-bottom: 0;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+#description {
+  font-size: 1rem;
+}
+#input-grid, 
+#radio-grid {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-auto-flow: row;
+}
+#radio-grid {
+  grid-template-rows: 1fr 7.5rem;
+}
+.textfield-container {
+  height: 7.5rem;
+}
+input,
+select,
+textarea,
+label {
+  margin-left: .7rem;
+}
+label {
+  padding: .7rem 0 .3rem .2rem;
+}
+input,
+textarea {
+  width: calc(100% - 3rem);
+  padding: 0 .7rem;
+  border-radius: 4px;
+  border: 1px solid #7c7c7c69;
+}
+textarea {
+  resize: none;
+  height: 4.5rem;
+  padding: .5rem .7rem;
+}
+input {
+  height: 2.25rem;
+}
+input[type="checkbox"] {
+  width: 1.15rem;
+}
+input[type="radio"] {
+  width: 1.25rem;
+  height: 2.05rem;
+}
+select {
+  height: 2.5rem;
+  width: calc(100% - 1.45rem);
+  padding: 0 .4rem;
+  border-radius: 4px;
+  border: 1px solid #7c7c7c69;
+  background-color: #ffffff;
+}
+.commentary {
+  margin: -0.5rem 0 0 .7rem;
+  color: #525252;
+  font-size: 0.8rem;
+  font-weight:300;
+}
+#survey-form {
+  height: 83%;
+  grid-template-rows: 31% 50% 15%;
+  grid-gap: 0.8rem;
+}
+.btn-container {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+button {
+  width: 12rem;
+  height: 2.5rem;
+  border-radius: 4px;
+  border: 1px solid #7c7c7c69;
+  background-color: #4169e1;
+  color: #ffffff;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+}
+button:hover {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+button:active {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+.grid {
+  display: grid;
+}
+.flex {
+  display: flex;
+}
+.dir-col {
+  flex-direction: column;
+}
+.col-span {
+  grid-column: 1 / span 2;
+}
+.text-center {
+  text-align: center;
+}
+.cursor-default {
+  cursor: default;
+}
+
+@media screen and (min-width: 1690px) {
+  #survey-container {
+    height: calc(100% - 3px);
+  }
+  main {
+    height: minmax(100vh, 150vh);
+  }
+  #survey-form {
+    display: flex;
+    flex-direction: column;
+  }
+  .btn-container {
+    margin: 2rem 0;
+  }
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+}
+@media screen and (min-width: 1240px) {
+  body {
+    background-size: 100vw auto;
+  }
+}
+@media screen and (max-width: 840px) {
+  #main {
+    grid-template-columns: 10vw 80vw 10vw;
+  }
+  body {
+    font-size: .75rem;
+  }
+  #title {
+    font-size: 1.3rem;
+  }
+  #description {
+    font-size: .9rem;
+  }
+}
+@media screen and (max-width: 640px) {
+  #main {
+    grid-template-columns: 0 100vw 0;
+  }
+  #survey-container {
+    height: calc(100vh - 3px);
+    margin: 1px 0;
+    border-radius: 32px;
+    padding: 0 1rem;
+  }
+}
+@media screen and (max-width: 476px) {
+  #survey-container {
+    height: calc(100% - 3px);
+  }
+  main {
+    height: minmax(100vh, 150vh);
+  }
+  #title {
+    font-size: 1.25rem;
+  }
+  #survey-form {
+    display: flex;
+    flex-direction: column;
+  }
+  #input-grid, #radio-grid {
+    display: flex;
+    flex-direction: column;
+  }
+  .btn-container {
+    margin: 2rem 0;
+  }
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+}

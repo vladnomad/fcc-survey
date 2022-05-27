@@ -1,0 +1,85 @@
+<main id="main" class="grid">
+  <section id="survey-container" class="flex dir-col">
+    <h1 id="title" class="text-center cursor-default">freeCodeCamp Survey form</h1>
+    <p id="description" class="text-center cursor-default">A brief survey of your experience with freeCodeCamp</p>
+    <form id="survey-form" class="grid">
+      <div id="input-grid" class="grid">
+        <div class="flex dir-col">
+          <label for="name" id="name-label">First name</label>
+          <input id="name" type="text" placeholder="Your first name" required />
+        </div>
+        <div class="flex dir-col">
+          <label for="last-name" id="last-name-label">Last name</label>
+          <input id="last-name" type="text" placeholder="Your last name" required />
+        </div>
+        <div class="flex dir-col">
+          <label for="number" id="number-label">Age (optional)</label>
+          <input id="number" type="number" min="1" max="99" placeholder="Your age" />
+        </div>
+        <div class="flex dir-col">
+          <label for="dropdown" id="dropdown-label">Current role</label>
+          <select id="dropdown" type="text" placeholder="Your current role">
+            <option disabled selected value>Your current role</option>
+            <option>Student</option>
+            <option>Full-time learner</option>
+            <option>Freelance</option>
+            <option>Part-time job</option>
+            <option>Full-time job</option>
+            <option>Prefer not to say</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="flex dir-col col-span">
+          <label for="email" id="email-label">Email address</label>
+          <input id="email" type="email" placeholder="Your email address" required />
+        </div>
+      </div>
+      <div id="radio-grid" class="grid">
+        <div class="flex dir-col h-set">
+          <label for="recommend">Would you recommend freeCodeCamp to a friend?</label>
+          <div class="flex">
+            <input id="radio1" type="radio" name="recommend" value="Definetely" />
+            <label for="radio1">Definetely</label>
+          </div>
+          <div class="flex">
+            <input id="radio2" type="radio" name="recommend" value="Maybe" />
+            <label for="radio2">To some extent</label>
+          </div>
+          <div class="flex">
+            <input id="radio3" type="radio" name="recommend" value="Not sure" />
+            <label for="radio3">Absolutely not</label>
+          </div>
+          <div class="flex">
+            <input id="radio4" type="radio" name="recommend" value="Not sure" />
+            <label for="radio4">Not sure</label>
+          </div>
+        </div>
+        <div class="flex dir-col h-set">
+          <label for="improve">What section of the course would you like to see improved?</label>
+          <div class="flex">
+            <input id="checkbox1" name="improve" type="checkbox" value="Front-end" />
+            <label for="checkbox1">Front-end</label>
+          </div>
+          <p class="commentary cursor-default">HTML, CSS, JS or React</p>
+          <div class="flex">
+            <input id="checkbox2" name="improve" type="checkbox" value="Back-end" />
+            <label for="checkbox2">Back-end</label>
+          </div>
+          <p class="commentary cursor-default">APIs, JS, Python, Ruby, PHP</p>
+          <div class="flex">
+            <input id="checkbox3" name="improve" type="checkbox" value="Full-stack" />
+            <label for="checkbox3">Full-stack</label>
+          </div>
+          <p class="commentary cursor-default">End-to-End understanding</p>
+        </div>
+        <div class="textfield-container flex dir-col col-span">
+          <label for="textfield" id="textfield-label">Any other feedback?</label>
+          <textarea id="textfield" rows="6"></textarea>
+        </div>
+      </div>
+      <div class="flex btn-container">
+        <button id="submit" type="submit" class="">Submit</button>
+      </div>
+    </form>
+  </section>
+</main>
